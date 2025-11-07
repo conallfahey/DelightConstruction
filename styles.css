@@ -66,7 +66,7 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     color: white;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 1px;
 }
 
@@ -153,11 +153,10 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 55px;
-
+    white-space: normal; /* allow wrapping */
+    overflow: visible; /* show full text */
+    text-overflow: clip; /* no ellipsis */
+    line-height: 1.2; /* balanced line height */
 }
 
 .hero-subtitle {
@@ -222,6 +221,24 @@ body {
     color: #333;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Ensure secondary buttons are visible on light sections */
+.services--plain .btn-secondary,
+.about .btn-secondary,
+.gallery .btn-secondary,
+.contact .btn-secondary {
+    background-color: transparent;
+    color: #333;
+    border-color: #333;
+}
+
+.services--plain .btn-secondary:hover,
+.about .btn-secondary:hover,
+.gallery .btn-secondary:hover,
+.contact .btn-secondary:hover {
+    background-color: #333;
+    color: #fff;
 }
 
 /* Section Styles */
@@ -422,6 +439,81 @@ section {
     margin-bottom: 2rem;
 }
 
+/* Feature cards (Why Choose Us) */
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.feature-card {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* center feature card content */
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+.feature-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.feature-body {
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+.feature-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.feature-body p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Center content on plain services section (Custom Homes page) */
+.services--plain .container {
+    text-align: center;
+}
+
+.services--plain .section-subtitle,
+.services--plain .section-title {
+    text-align: center;
+}
+
+.services--plain .service {
+    align-items: center;
+    text-align: center;
+}
+
+.services--plain .feature-cards {
+    justify-items: center;
+}
+
+/* Center content on About page */
+.about .container,
+.about .about-text,
+.about .about-text .section-title {
+    text-align: center;
+}
+
 /* About Section */
 .about {
     background-color: white;
@@ -448,7 +540,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
-    display: block;
+    display: inline-block;
     margin-bottom: 1rem;
     position: relative;
 }
@@ -456,11 +548,12 @@ section {
 .section-subtitle::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: -0.5rem;
     width: 40px;
     height: 2px;
     background-color: #3a3636;
+    transform: translateX(-50%);
 }
 
 .about-text .section-title {
@@ -802,6 +895,11 @@ section {
         gap: 2rem;
     }
 
+    .feature-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -852,6 +950,10 @@ section {
         padding: 0 15px;
     }
 
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+
     .service-card {
         padding: 1.5rem;
     }
@@ -882,4 +984,52 @@ html {
 .about-content,
 .contact-content {
     animation: fadeInUp 0.6s ease-out;
+}
+
+/* Plain services variant for pages that should not use a photo background */
+.services--plain {
+    background-image: none !important;
+    background-color: #f7f7f7;
+    background-attachment: scroll;
+}
+
+.services--plain::before {
+    content: none !important;
+}
+
+.services--plain .section-title {
+    color: #333;
+    text-shadow: none;
+}
+
+/* Service text blocks styled as readable cards on plain background */
+.services--plain .service {
+    background: #ffffff;
+    padding: 2rem;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border-top: 4px solid #333;
+    border-radius: 6px;
+}
+
+.services--plain .service h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.services--plain .service p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Extra responsive tweaks for cards */
+@media (max-width: 992px) {
+    .service-card { min-height: auto; }
+    .about-stats { gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .service-card { min-height: auto; }
 }
