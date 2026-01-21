@@ -35,27 +35,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Contact form handling
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const phone = formData.get('phone');
-            const message = formData.get('message');
+    const contactForms = document.querySelectorAll('.contact-form');
+    if (contactForms.length) {
+        contactForms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
 
-            // Simple validation
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const phone = formData.get('phone');
+                const message = formData.get('message');
 
-            // Simulate form submission
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
+                if (!name || !email || !message) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
         });
     }
 
