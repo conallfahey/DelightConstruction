@@ -42,17 +42,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
 
                 const formData = new FormData(this);
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const phone = formData.get('phone');
-                const message = formData.get('message');
+                
+                // Determine required fields based on inputs present
+                const nameInput = this.querySelector('[name="name"]');
+                const emailInput = this.querySelector('[name="email"]');
+                const messageInput = this.querySelector('[name="message"]');
+                
+                let isValid = true;
+                
+                if (nameInput && !nameInput.value.trim()) isValid = false;
+                if (emailInput && !emailInput.value.trim()) isValid = false;
+                if (messageInput && !messageInput.value.trim()) isValid = false;
 
-                if (!name || !email || !message) {
+                // Special case for lead magnet which might only have an email input without name attribute
+                // (though good practice is to name it)
+                const genericEmail = this.querySelector('input[type="email"]');
+                if (!emailInput && genericEmail && !genericEmail.value.trim()) isValid = false;
+
+                if (!isValid) {
                     alert('Please fill in all required fields.');
                     return;
                 }
 
-                alert('Thank you for your message! We will get back to you soon.');
+                alert('Thank you! We have received your submission.');
                 this.reset();
             });
         });
