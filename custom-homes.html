@@ -14,7 +14,7 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="nav-left">
-                    <span class="brand-text">Delight Construction</span>
+                    <a href="index.html" class="brand-text">Delight Construction</a>
                 </div>
                 <a class="logo" href="index.html">
                     <img src="images/DelightLogo.png" alt="Delight Construction Logo">
@@ -33,18 +33,58 @@
         </nav>
     </header>
 
-    <section class="hero" style="height:60vh;background-image:linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('images/hero-bg-1920.webp');background-position:center;">
+    <section class="hero-page hero-services">
         <div class="hero-content">
-            <h1 class="hero-title">Custom Home Builder — Missoula & Western MT</h1>
-            <p class="hero-subtitle">Thoughtful design, quality craftsmanship, and clear communication from day one.</p>
+            <h1 class="hero-title">Custom Home Building & Premium Renovations</h1>
+            <p class="hero-subtitle">From blueprints to the final coat of paint, we build with precision, transparency, and a deep respect for Montana design.</p>
             <div class="hero-buttons">
                 <a href="index.html#contact" class="btn btn-primary">Request a Bid</a>
-                <a href="index.html#gallery" class="btn btn-secondary">View Projects</a>
+                <a href="#custom-homes" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
     </section>
 
-    <section class="services services--plain" style="padding:60px 0;">
+    <!-- Custom Homes Section -->
+    <section id="custom-homes" class="service-section alt-bg">
+        <div class="container">
+            <div class="service-grid-layout">
+                <div class="service-content">
+                    <span class="section-subtitle">CUSTOM HOMES</span>
+                    <h2>Your Vision, Our Blueprints</h2>
+                    <p>Building a custom home in Western Montana requires more than just lumber and nails—it demands a deep understanding of the local landscape, climate, and architectural style. We specialize in "Mountain Modern" and Rustic designs that feel at home in the Five Valleys.</p>
+                    <p>From initial site evaluation to the final walkthrough, we guide you through every step of the process with complete transparency.</p>
+                    <a href="missoula-custom-home-builders.html" class="btn btn-primary">Explore Custom Homes</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/DelightConstructionBlueprint1.png" alt="Custom Home Blueprints" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Remodels Section -->
+    <section id="remodels" class="service-section">
+        <div class="container">
+            <div class="service-grid-layout" style="direction: rtl;"> <!-- Visual flip for variety -->
+                <div class="service-content" style="direction: ltr;">
+                    <span class="section-subtitle">PREMIUM REMODELS</span>
+                    <h2>Elevate Your Existing Space</h2>
+                    <p>Love your location but need more space or a modern update? We bring the same level of care and craftsmanship to large-scale remodels and additions. Whether it's a gourmet kitchen expansion, a master suite addition, or a full-home renovation, we ensure the new work blends seamlessly with the old.</p>
+                    <ul class="aesthetic-list" style="margin-bottom: 2rem;">
+                        <li><span class="icon"></span>Whole-Home Renovations</li>
+                        <li><span class="icon"></span>Kitchen & Bath Modernization</li>
+                        <li><span class="icon"></span>Additions & ADUs</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn btn-primary">Discuss Your Remodel</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/DelightPhoto.JPG" alt="Luxury Kitchen Remodel" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services services--plain" style="padding:80px 0; background-color: #f8fafc;">
         <div class="container">
             <span class="section-subtitle">OUR PROCESS</span>
             <h2 class="section-title">Design → Build → Deliver</h2>
@@ -62,59 +102,65 @@
                     <p>We finish with a thorough walk‑through, documentation, and a clean handoff. Post‑move‑in support is part of how we stand behind our work.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="why-choose" style="margin-top:2rem;">
-                <span class="section-subtitle">WHY CHOOSE US</span>
-                <h2 class="section-title">Built Right, Built Local</h2>
-                <div class="feature-cards">
-                    <article class="feature-card">
-                        <div class="feature-image">
-                            <img src="images/gallery-2.webp" alt="Licensed and insured builder" loading="lazy">
-                        </div>
-                        <div class="feature-body">
-                            <h3>Licensed & Insured</h3>
-                            <p>Peace of mind and compliance from foundation to finish.</p>
-                        </div>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-image">
-                            <img src="images/gallery-3.webp" alt="Owner-operated construction oversight" loading="lazy">
-                        </div>
-                        <div class="feature-body">
-                            <h3>Owner‑Operated Oversight</h3>
-                            <p>Hands‑on quality control at each milestone of your build.</p>
-                        </div>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-image">
-                            <img src="images/gallery-4.webp" alt="Transparent bidding and change management" loading="lazy">
-                        </div>
-                        <div class="feature-body">
-                            <h3>Transparent Bids & Changes</h3>
-                            <p>Clear estimates, documented changes, and schedule discipline.</p>
-                        </div>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-image">
-                            <img src="images/gallery-5.webp" alt="Serving Missoula, Seeley Lake and Western MT" loading="lazy">
-                        </div>
-                        <div class="feature-body">
-                            <h3>Local Focus</h3>
-                            <p>Missoula, Seeley Lake, and Western Montana custom homes.</p>
-                        </div>
-                    </article>
-                </div>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section" style="padding: 80px 0; background-color: white;">
+        <div class="container">
+            <span class="section-subtitle">WHY CHOOSE US</span>
+            <h2 class="section-title">Built Right, Built Local</h2>
+            <div class="feature-cards" style="margin-top: 3rem;">
+                <article class="feature-card">
+                    <div class="feature-image">
+                        <img src="images/gallery-2.webp" alt="Licensed and insured builder" loading="lazy">
+                    </div>
+                    <div class="feature-body">
+                        <h3>Licensed & Insured</h3>
+                        <p>Peace of mind and compliance from foundation to finish.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-image">
+                        <img src="images/gallery-3.webp" alt="Owner-operated construction oversight" loading="lazy">
+                    </div>
+                    <div class="feature-body">
+                        <h3>Owner‑Operated Oversight</h3>
+                        <p>Hands‑on quality control at each milestone of your build.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-image">
+                        <img src="images/gallery-4.webp" alt="Transparent bidding and change management" loading="lazy">
+                    </div>
+                    <div class="feature-body">
+                        <h3>Transparent Bids & Changes</h3>
+                        <p>Clear estimates, documented changes, and schedule discipline.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-image">
+                        <img src="images/gallery-5.webp" alt="Serving Missoula, Seeley Lake and Western MT" loading="lazy">
+                    </div>
+                    <div class="feature-body">
+                        <h3>Local Focus</h3>
+                        <p>Missoula, Seeley Lake, and Western Montana custom homes.</p>
+                    </div>
+                </article>
             </div>
+        </div>
+    </section>
 
-            <div style="margin-top:2rem;">
-                <span class="section-subtitle">SERVICE AREA</span>
-                <h2 class="section-title">Missoula • Seeley Lake • Western MT</h2>
-                <p>We build custom homes across Western Montana, with a focus on the Missoula area and the Seeley‑Swan Valley.</p>
-            </div>
-
-            <div style="margin-top:2rem;">
-                <a href="index.html#contact" class="btn btn-primary">Start Your Custom Home</a>
-                <a href="index.html#gallery" class="btn btn-secondary" style="margin-left:0.5rem;">Explore the Gallery</a>
+    <!-- Service Area & CTA Section -->
+    <section class="service-area-section" style="padding: 100px 0; background-image: linear-gradient(rgba(16, 72, 113, 0.95), rgba(7, 37, 59, 0.95)), url('images/hero-bg-1280.webp'); background-size: cover; background-position: center; background-attachment: fixed; color: white;">
+        <div class="container">
+            <span class="section-subtitle light" style="color: rgba(255, 255, 255, 0.7);">SERVICE AREA</span>
+            <h2 class="section-title" style="color: white; text-shadow: none; margin-bottom: 1.5rem;">Missoula • Seeley Lake • Western MT</h2>
+            <p style="font-size: 1.25rem; max-width: 700px; margin: 0 0 3rem; color: rgba(255, 255, 255, 0.9);">We build custom homes across Western Montana, with a focus on the Missoula area and the Seeley‑Swan Valley.</p>
+            
+            <div style="display: flex; justify-content: flex-start; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="index.html#contact" class="btn btn-primary" style="background-color: white; color: var(--brand-primary); border-color: white;">Start Your Custom Home</a>
+                <a href="index.html#gallery" class="btn btn-secondary" style="color: white; border-color: white;">Explore the Gallery</a>
             </div>
         </div>
     </section>
