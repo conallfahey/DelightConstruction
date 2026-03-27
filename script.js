@@ -34,42 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact form handling
-    const contactForms = document.querySelectorAll('.contact-form');
-    if (contactForms.length) {
-        contactForms.forEach(form => {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                const formData = new FormData(this);
-                
-                // Determine required fields based on inputs present
-                const nameInput = this.querySelector('[name="name"]');
-                const emailInput = this.querySelector('[name="email"]');
-                const messageInput = this.querySelector('[name="message"]');
-                
-                let isValid = true;
-                
-                if (nameInput && !nameInput.value.trim()) isValid = false;
-                if (emailInput && !emailInput.value.trim()) isValid = false;
-                if (messageInput && !messageInput.value.trim()) isValid = false;
-
-                // Special case for lead magnet which might only have an email input without name attribute
-                // (though good practice is to name it)
-                const genericEmail = this.querySelector('input[type="email"]');
-                if (!emailInput && genericEmail && !genericEmail.value.trim()) isValid = false;
-
-                if (!isValid) {
-                    alert('Please fill in all required fields.');
-                    return;
-                }
-
-                alert('Thank you! We have received your submission.');
-                this.reset();
-            });
-        });
-    }
-
     // Header background on scroll - removed to keep consistent dark background
 
     // Intersection Observer for animations
