@@ -8,6 +8,68 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "HomeAndConstructionBusiness",
+          "@id": "https://delightconstruction.com/#business",
+          "name": "Delight Construction",
+          "url": "https://delightconstruction.com/",
+          "telephone": "+1-406-317-3855",
+          "email": "delightconstruction7@gmail.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://delightconstruction.com/images/DelightLogo.png"
+          },
+          "image": "https://delightconstruction.com/images/DelightLogo.png",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Missoula",
+            "addressRegion": "MT",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            { "@type": "Place", "name": "Missoula, MT" },
+            { "@type": "Place", "name": "Seeley Lake, MT" },
+            { "@type": "Place", "name": "Western Montana" }
+          ],
+          "priceRange": "$$$"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://delightconstruction.com/#website",
+          "url": "https://delightconstruction.com/",
+          "name": "Delight Construction",
+          "publisher": { "@id": "https://delightconstruction.com/#business" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://delightconstruction.com/#webpage",
+          "url": "https://delightconstruction.com/",
+          "name": "Custom Home Builder in Missoula & Western Montana | Delight Construction",
+          "description": "Licensed, insured, and owner‑operated. We build custom homes and premium remodels in Missoula, Seeley Lake and Western MT. Request a bid today.",
+          "isPartOf": { "@id": "https://delightconstruction.com/#website" },
+          "about": { "@id": "https://delightconstruction.com/#business" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://delightconstruction.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://delightconstruction.com/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -21,6 +83,9 @@
                     <img src="images/DelightLogo.png" alt="Delight Construction Logo">
                 </a>
                 <ul class="nav-menu">
+                    <li class="nav-item nav-item-home">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a href="services.html" class="nav-link">Services</a>
                     </li>
@@ -47,6 +112,7 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-content">
+                <img class="hero-logo" src="images/DelightLogo.png" alt="Delight Construction Logo">
                 <div class="hero-eyebrow">
                     <span class="hero-eyebrow-dot"></span>
                     <span>Custom homes, crafted for Western Montana</span>

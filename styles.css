@@ -145,6 +145,17 @@ body {
     padding: 0.45rem 0.8rem;
     border-radius: 999px;
     transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+@media (min-width: 769px) {
+    .nav-item-home {
+        display: none;
+    }
+
+    .nav-menu {
+        gap: 2.1rem;
+    }
 }
 
 .nav-link:hover {
@@ -205,6 +216,14 @@ body {
     background-position: center;
     background-attachment: fixed;
     position: relative;
+}
+
+.hero-logo {
+    display: block;
+    width: auto;
+    height: 58px;
+    margin: 0 auto 1rem 0;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
 }
 
 .hero-about {
@@ -1314,7 +1333,7 @@ section {
     }
     
     .hero-page {
-        padding-top: 210px;
+        padding-top: 185px;
         min-height: auto;
         background-attachment: scroll;
     }
@@ -1333,7 +1352,7 @@ section {
     .hero {
         height: auto;
         min-height: auto;
-        padding-top: 150px;
+        padding-top: 130px;
         padding-bottom: 50px;
         background-attachment: scroll; /* Fix for mobile background */
         background-image: linear-gradient(115deg, rgba(7, 37, 59, 0.9), rgba(7, 37, 59, 0.42)), url('images/hero-bg-768.webp');
@@ -1350,7 +1369,13 @@ section {
     .hero-content {
         max-width: 100%;
         text-align: center;
-        margin-top: 2.5rem;
+        margin-top: 1.75rem;
+    }
+
+    .hero-logo {
+        margin-left: auto;
+        margin-right: auto;
+        height: 52px;
     }
     
     .hero-eyebrow { display: none; }

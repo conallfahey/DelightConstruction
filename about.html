@@ -20,6 +20,7 @@
                     <img src="images/DelightLogo.png" alt="Delight Construction Logo">
                 </a>
                 <ul class="nav-menu">
+                    <li class="nav-item nav-item-home"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="custom-homes.html" class="nav-link">Custom Homes</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
@@ -36,6 +37,7 @@
 
     <section class="hero-page hero-about">
         <div class="hero-content">
+            <img class="hero-logo" src="images/DelightLogo.png" alt="Delight Construction Logo">
             <h1 class="hero-title">About Delight Construction</h1>
             <p class="hero-subtitle">Licensed, insured, owner‑operated — building in Missoula, Seeley Lake and Western MT.</p>
             <div class="hero-buttons">
@@ -166,18 +168,69 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Delight Construction",
-      "url": "",
-      "telephone": "+1-406-317-3855",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Missoula",
-        "addressRegion": "MT",
-        "addressCountry": "US"
-      },
-      "areaServed": ["Missoula MT", "Seeley Lake MT", "Western Montana"],
-      "priceRange": "$$$$"
+      "@graph": [
+        {
+          "@type": "HomeAndConstructionBusiness",
+          "@id": "https://delightconstruction.com/#business",
+          "name": "Delight Construction",
+          "url": "https://delightconstruction.com/",
+          "telephone": "+1-406-317-3855",
+          "email": "delightconstruction7@gmail.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://delightconstruction.com/images/DelightLogo.png"
+          },
+          "image": "https://delightconstruction.com/images/DelightLogo.png",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Missoula",
+            "addressRegion": "MT",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            { "@type": "Place", "name": "Missoula, MT" },
+            { "@type": "Place", "name": "Seeley Lake, MT" },
+            { "@type": "Place", "name": "Western Montana" }
+          ],
+          "priceRange": "$$$"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://delightconstruction.com/#website",
+          "url": "https://delightconstruction.com/",
+          "name": "Delight Construction",
+          "publisher": { "@id": "https://delightconstruction.com/#business" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://delightconstruction.com/about.html#webpage",
+          "url": "https://delightconstruction.com/about.html",
+          "name": "About Delight Construction | Missoula Custom Home Builder",
+          "description": "Owner‑operated, licensed and insured. Building custom homes and premium remodels in Missoula, Seeley Lake and Western MT. Learn our story and approach.",
+          "isPartOf": { "@id": "https://delightconstruction.com/#website" },
+          "about": { "@id": "https://delightconstruction.com/#business" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://delightconstruction.com/about.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://delightconstruction.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://delightconstruction.com/about.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 </body>

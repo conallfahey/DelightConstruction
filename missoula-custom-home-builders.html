@@ -13,20 +13,85 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Delight Construction",
-      "image": "https://delightconstruction.com/images/DelightLogo.png",
-      "telephone": "(406) 317-3855",
-      "email": "delightconstruction7@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Missoula",
-        "addressRegion": "MT",
-        "postalCode": "59801",
-        "addressCountry": "US"
-      },
-      "areaServed": ["Missoula", "Seeley Lake", "Lolo", "Frenchtown", "Bonner"],
-      "priceRange": "$$$"
+      "@graph": [
+        {
+          "@type": "HomeAndConstructionBusiness",
+          "@id": "https://delightconstruction.com/#business",
+          "name": "Delight Construction",
+          "url": "https://delightconstruction.com/",
+          "telephone": "+1-406-317-3855",
+          "email": "delightconstruction7@gmail.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://delightconstruction.com/images/DelightLogo.png"
+          },
+          "image": "https://delightconstruction.com/images/DelightLogo.png",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Missoula",
+            "addressRegion": "MT",
+            "postalCode": "59801",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            { "@type": "Place", "name": "Missoula, MT" },
+            { "@type": "Place", "name": "Seeley Lake, MT" },
+            { "@type": "Place", "name": "Lolo, MT" },
+            { "@type": "Place", "name": "Frenchtown, MT" },
+            { "@type": "Place", "name": "Bonner, MT" }
+          ],
+          "priceRange": "$$$"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://delightconstruction.com/#website",
+          "url": "https://delightconstruction.com/",
+          "name": "Delight Construction",
+          "publisher": { "@id": "https://delightconstruction.com/#business" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://delightconstruction.com/missoula-custom-home-builders.html#webpage",
+          "url": "https://delightconstruction.com/missoula-custom-home-builders.html",
+          "name": "Custom Home Builders Missoula, MT | Mountain Modern & Rustic Homes",
+          "description": "Missoula’s premier custom home builders specializing in Mountain Modern & Rustic design. 100% Montana native team. High-performance air sealing & roofing.",
+          "isPartOf": { "@id": "https://delightconstruction.com/#website" },
+          "about": { "@id": "https://delightconstruction.com/#business" },
+          "inLanguage": "en-US",
+          "mainEntity": { "@id": "https://delightconstruction.com/missoula-custom-home-builders.html#service" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://delightconstruction.com/missoula-custom-home-builders.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://delightconstruction.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Missoula Custom Home Builders",
+              "item": "https://delightconstruction.com/missoula-custom-home-builders.html"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://delightconstruction.com/missoula-custom-home-builders.html#service",
+          "name": "Custom Home Building in Missoula, MT",
+          "serviceType": "Residential construction",
+          "provider": { "@id": "https://delightconstruction.com/#business" },
+          "areaServed": [
+            { "@type": "Place", "name": "Missoula, MT" }
+          ],
+          "url": "https://delightconstruction.com/missoula-custom-home-builders.html",
+          "description": "Design-build custom homes in Missoula, Montana with mountain modern and rustic styles, high-performance details, and owner-operated oversight."
+        }
+      ]
     }
     </script>
 </head>
@@ -42,6 +107,9 @@
                     <img src="images/DelightLogo.png" alt="Delight Construction Logo">
                 </a>
                 <ul class="nav-menu">
+                    <li class="nav-item nav-item-home">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a href="services.html" class="nav-link">Services</a>
                     </li>
@@ -72,6 +140,7 @@
                     <span class="hero-eyebrow-dot"></span>
                     <span>Expert Mountain Modern & Rustic Design-Build</span>
                 </div>
+                <img class="hero-logo" src="images/DelightLogo.png" alt="Delight Construction Logo">
                 <h1 class="hero-title">Custom Home Builders Missoula, MT</h1>
                 <p class="hero-subtitle">Built by Montana natives for the Five Valleys. We combine high-performance engineering with the rugged soul of Western Montana to create homes that thrive in our climate.</p>
                 <div class="hero-buttons">
