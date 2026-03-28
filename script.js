@@ -34,8 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Header background on scroll - removed to keep consistent dark background
-
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,

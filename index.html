@@ -6,7 +6,7 @@
     <title>Custom Home Builder in Missoula & Western Montana | Delight Construction</title>
     <meta name="description" content="Licensed, insured, and owner‑operated. We build custom homes and premium remodels in Missoula, Seeley Lake and Western MT. Request a bid today.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
@@ -15,14 +15,17 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="nav-left">
-                    <a href="index.html" class="brand-text">Delight Construction</a>
+                    <a href="index.html" class="brand-text"><span class="brand-wordmark">Delight</span> <span class="brand-construction">Construction</span></a>
                 </div>
                 <a class="logo" href="index.html">
                     <img src="images/DelightLogo.png" alt="Delight Construction Logo">
                 </a>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="custom-homes.html" class="nav-link">Services</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="custom-homes.html" class="nav-link">Custom Homes</a>
                     </li>
                     <li class="nav-item">
                         <a href="about.html" class="nav-link">About</a>
@@ -76,6 +79,9 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <input type="text" name="how_did_you_hear" placeholder="How did you hear about us?">
+                    </div>
+                    <div class="form-group">
                         <textarea name="message" placeholder="Briefly describe your project" rows="3" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Request a Bid</button>
@@ -104,41 +110,124 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <section class="blueprint-quote">
+        <div class="container">
+            <div class="blueprint-quote-inner">
+                <div class="blueprint-quote-mark">“”</div>
+                <blockquote class="blueprint-quote-text">"I started Delight Construction out of my love for the industry. Our community is important to us, as is our commitment to building."</blockquote>
+                <div class="blueprint-quote-divider"></div>
+                <p class="blueprint-quote-attrib">— Founder, Delight Construction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delight Protocol Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">What We Build</h2>
+            <h2 class="section-title">The Delight Protocol</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-subtitle">Step 1</span>
+                        <h3>Plan</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>We start with a site walk, scope, and clear bid. Plans, selections, and scheduling get dialed in so you know exactly what’s happening and when.</p>
+                    </div>
+                    <a href="#contact" class="btn btn-dark">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-subtitle">Step 2</span>
+                        <h3>Build</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Owner‑operated oversight, clean job sites, and quality control at every milestone. We build with Montana‑ready materials and craftsmanship that lasts.</p>
+                    </div>
+                    <a href="services.html" class="btn btn-dark">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-subtitle">Step 3</span>
+                        <h3>Deliver</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Final walkthrough, punch list, and a clean handoff. We make sure the details are right and you feel confident moving in, using the space, or hosting family.</p>
+                    </div>
+                    <a href="#contact" class="btn btn-dark">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services services--blueprint services--build">
+        <div class="container">
+            <span class="section-subtitle light">What We Build</span>
+            <h2 class="section-title">A Few of Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-header">
                         <span class="service-subtitle">Custom Homes</span>
-                        <h3>MONTANA-READY BUILDS</h3>
+                        <h3>Custom Home Building</h3>
                     </div>
                     <div class="service-content">
-                        <p>From design to delivery, we build custom homes tailored to Montana's climate and your lifestyle. Licensed, insured, and owner-operated with transparent bids and schedule discipline for your peace of mind.</p>
+                        <p>Ground-up builds with clear scopes, schedule discipline, and owner‑operated oversight.</p>
                     </div>
-                    <a href="#about" class="btn btn-dark">LEARN MORE</a>
+                    <a href="services.html" class="btn btn-dark">Explore</a>
                 </div>
                 <div class="service-card">
                     <div class="service-header">
-                        <span class="service-subtitle">Premium Remodels</span>
-                        <h3>LUXURY RENOVATIONS</h3>
+                        <span class="service-subtitle">Renovations</span>
+                        <h3>Home Renovations</h3>
                     </div>
                     <div class="service-content">
-                        <p>Transform your existing home with our premium remodeling services. From kitchens and baths to whole-home renovations, we deliver high-end craftsmanship that enhances both beauty and functionality.</p>
+                        <p>Whole-home updates that improve flow, function, and durability with premium finishes.</p>
                     </div>
-                    <a href="#contact" class="btn btn-dark">LEARN MORE</a>
+                    <a href="services.html" class="btn btn-dark">Explore</a>
                 </div>
                 <div class="service-card">
                     <div class="service-header">
-                        <span class="service-subtitle">Our Process</span>
-                        <h3>PLAN → BUILD → DELIVER</h3>
+                        <span class="service-subtitle">Kitchens</span>
+                        <h3>Kitchen Remodeling</h3>
                     </div>
                     <div class="service-content">
-                        <p>From plan review to final walkthrough, we keep your project clear, documented, and on schedule. Owner onsite from foundation to finish ensures quality and accountability every step of the way.</p>
+                        <p>Layout-driven kitchen remodels with clean installs, sharp details, and lasting materials.</p>
                     </div>
-                    <a href="#contact" class="btn btn-dark">LEARN MORE</a>
+                    <a href="services.html" class="btn btn-dark">Explore</a>
                 </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-subtitle">Bathrooms</span>
+                        <h3>Bathroom Remodeling</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Full bathroom renovations with quality waterproofing, tile work, and clean finishes.</p>
+                    </div>
+                    <a href="services.html" class="btn btn-dark">Explore</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-subtitle">Outdoor</span>
+                        <h3>Deck Construction</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Outdoor living built for Montana weather, with solid structure, drainage, and finish.</p>
+                    </div>
+                    <a href="services.html" class="btn btn-dark">Explore</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-subtitle">Shops & Barns</span>
+                        <h3>Pole Building Construction</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Efficient post-frame buildings for storage, shops, and barns with durable materials.</p>
+                    </div>
+                    <a href="services.html" class="btn btn-dark">Explore</a>
+                </div>
+            </div>
+            <div class="services-cta">
+                <a href="services.html" class="btn btn-secondary">Explore All Services</a>
             </div>
         </div>
     </section>
@@ -211,7 +300,25 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Delight Construction.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Delight Construction</h3>
+                    <p><a href="tel:+14063173855">(406) 317-3855</a></p>
+                    <p><a href="mailto:delightconstruction7@gmail.com">delightconstruction7@gmail.com</a></p>
+                    <p>Missoula, Montana</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="services.html">Services</a></p>
+                    <p><a href="custom-homes.html">Custom Homes</a></p>
+                    <p><a href="about.html">About</a></p>
+                    <p><a href="index.html#contact">Contact</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Delight Construction.</p>
+            </div>
         </div>
     </footer>
 
