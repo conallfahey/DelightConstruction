@@ -266,6 +266,16 @@ body {
     align-items: center;
 }
 
+.service-grid-layout--sticky-image {
+    align-items: start;
+}
+
+.service-image.service-image--sticky {
+    position: sticky;
+    top: 200px;
+    align-self: start;
+}
+
 @media (max-width: 768px) {
     .service-grid-layout {
         grid-template-columns: 1fr;
@@ -275,6 +285,12 @@ body {
     .service-image {
         min-height: 240px;
         aspect-ratio: 16 / 11;
+    }
+
+    .service-image.service-image--sticky {
+        position: relative;
+        top: auto;
+        align-self: auto;
     }
 }
 
@@ -744,6 +760,7 @@ section {
 .service-card .btn {
     margin-top: auto;
     align-self: flex-start;
+    margin-bottom: 0.75rem;
 }
 
 .service-card p:last-of-type {

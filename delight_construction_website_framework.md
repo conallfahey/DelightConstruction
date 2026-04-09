@@ -229,7 +229,7 @@ Embed via script tag on relevant pages.
   "@type": "LocalBusiness",
   "name": "Delight Construction",
   "image": "https://example.com/images/og-cover.jpg",
-  "url": "https://delightconstruction.com/",
+  "url": "https://delight-construction.com//",
   "telephone": "+1-406-000-0000",
   "address": {
     "@type": "PostalAddress",
