@@ -13,7 +13,7 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "HomeAndConstructionBusiness",
+          "@type": ["LocalBusiness", "Contractor"],
           "@id": "https://delight-construction.com/#business",
           "name": "Delight Construction",
           "url": "https://delight-construction.com/",
@@ -35,14 +35,32 @@
             { "@type": "Place", "name": "Seeley Lake, MT" },
             { "@type": "Place", "name": "Western Montana" }
           ],
-          "priceRange": "$$$"
+          "priceRange": "$$$",
+          "parentOrganization": { "@id": "https://delight-construction.com/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://delight-construction.com/#organization",
+          "name": "Delight Construction",
+          "url": "https://delight-construction.com/",
+          "telephone": "+1-406-317-3855",
+          "email": "delightconstruction7@gmail.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://delight-construction.com/images/DelightLogo.png"
+          },
+          "areaServed": [
+            { "@type": "Place", "name": "Missoula, MT" },
+            { "@type": "Place", "name": "Seeley Lake, MT" },
+            { "@type": "Place", "name": "Western Montana" }
+          ]
         },
         {
           "@type": "WebSite",
           "@id": "https://delight-construction.com/#website",
           "url": "https://delight-construction.com/",
           "name": "Delight Construction",
-          "publisher": { "@id": "https://delight-construction.com/#business" },
+          "publisher": { "@id": "https://delight-construction.com/#organization" },
           "inLanguage": "en-US"
         },
         {
@@ -127,7 +145,7 @@
             <aside class="hero-form-card">
                 <h2 class="hero-form-title">Tell us about your project</h2>
                 <p class="hero-form-subtitle">Share a few details and we will follow up to schedule a site walk.</p>
-                <form action="https://api.web3forms.com/submit" method="POST">
+                <form class="hero-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="e27d29ee-3e0c-47bc-b17f-ec79dc23fae6">
                     <div class="hero-form-row">
                         <div class="form-group">
@@ -165,7 +183,7 @@
                     <span class="section-subtitle">OUR STORY</span>
                     <h2 class="section-title">About Delight</h2>
                     <p>At Delight Construction, our mission is to bring craftsmanship, creativity, and care to every project we build. As a local construction company, we take pride in designing and constructing custom homes and remodels that refect the unique vision and lifestyle of each client. With a commitment to quality, integrity, and open communication, we strive to make the building process a true delight-from the first idea to the final detail.</p>
-                    <a href="#contact" class="btn btn-primary">ABOUT US</a>
+                    <a href="#contact" class="btn btn-primary">MORE ABOUT US</a>
                 </div>
         <div class="about-image">
             <picture>

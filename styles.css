@@ -185,8 +185,8 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 80vh;
-    min-height: 80dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
     height: auto;
     background: linear-gradient(115deg, rgba(5, 23, 35, 0.88), rgba(7, 37, 59, 0.35)), url('images/luxury-custom-home-missoula-exterior.avif');
     background-size: cover;
@@ -204,11 +204,11 @@ body {
 
 /* Sub-page Hero Styles */
 .hero-page {
-    min-height: 50vh;
+    min-height: 85vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
     color: white;
     padding-top: 150px;
     padding-bottom: 60px;
@@ -227,11 +227,11 @@ body {
 }
 
 .hero-about {
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('images/missoula-construction-framing-1920.webp');
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('images/custom-home-exterior-staircase.avif');
 }
 
 .hero-services {
-    background-image: linear-gradient(rgba(7, 37, 59, 0.9), rgba(7, 37, 59, 0.8)), url('images/DelightConstructionBlueprint1.png');
+    background-image: linear-gradient(rgba(7, 37, 59, 0.9), rgba(7, 37, 59, 0.473)), url('images/luxury-custom-home-missoula-exterior.avif');
 }
 
 .hero-page.hero-services {
@@ -247,6 +247,22 @@ body {
 }
 
 .hero-page.hero-services .hero-buttons {
+    justify-content: flex-start;
+}
+
+.hero-page.hero-about {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.hero-page.hero-about .hero-content {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-page.hero-about .hero-buttons {
     justify-content: flex-start;
 }
 
@@ -473,20 +489,36 @@ body {
 }
 
 .hero-form .form-group input,
-.hero-form .form-group textarea {
-    background-color: rgba(255, 255, 255, 0.1);
+.hero-form .form-group textarea,
+.hero-form-card form .form-group input,
+.hero-form-card form .form-group textarea {
+    background-color: rgba(7, 37, 59, 0.22);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    color: rgba(255, 255, 255, 0.96);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-.hero-form .form-group textarea {
+.hero-form .form-group textarea,
+.hero-form-card form .form-group textarea {
     border-radius: 12px;
 }
 
 .hero-form .form-group input::placeholder,
-.hero-form .form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.55);
+.hero-form .form-group textarea::placeholder,
+.hero-form-card form .form-group input::placeholder,
+.hero-form-card form .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-form .form-group input:focus,
+.hero-form .form-group textarea:focus,
+.hero-form-card form .form-group input:focus,
+.hero-form-card form .form-group textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.56);
+    background-color: rgba(7, 37, 59, 0.32);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
 }
 
 .hero-form .btn-primary {
@@ -782,7 +814,7 @@ section {
 }
 
 .services.services--blueprint {
-    background-image: url('images/DelightConstructionBlueprint1.png');
+    background-image: url('images/missoula-custom-home-blueprint.webp');
 }
 
 .services.services--blueprint::before {
@@ -921,6 +953,33 @@ section {
 .service-cluster p {
     margin: 0;
     color: #475569;
+}
+
+.founder-highlight {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(16, 72, 113, 0.08), rgba(7, 37, 59, 0.03));
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 22px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.founder-highlight__image img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.16);
+}
+
+.founder-highlight__content p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #334155;
 }
 
 .service-card p:last-of-type {
@@ -1163,7 +1222,7 @@ section {
 }
 
 .blueprint-quote {
-    background-image: linear-gradient(115deg, rgba(7, 37, 59, 0.92), rgba(7, 37, 59, 0.74)), url('images/DelightConstructionBlueprint1.png');
+    background-image: linear-gradient(115deg, rgba(7, 37, 59, 0.92), rgba(7, 37, 59, 0.74)), url('images/missoula-custom-home-blueprint.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -2000,7 +2059,7 @@ section {
 
 /* Native Advantage Section Styles */
 .native-advantage {
-    background: linear-gradient(rgba(16, 72, 113, 0.92), rgba(16, 72, 113, 0.85)), url('images/DelightConstructionBlueprint1.png');
+    background: linear-gradient(rgba(16, 72, 113, 0.92), rgba(16, 72, 113, 0.85)), url('images/missoula-custom-home-blueprint.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2170,5 +2229,10 @@ section {
 @media (max-width: 768px) {
     .service-clusters {
         grid-template-columns: 1fr;
+    }
+
+    .founder-highlight {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
     }
 }

@@ -49,7 +49,7 @@
 
     <section class="about" style="padding:60px 0;">
         <div class="container">
-            <div class="about-content" style="grid-template-columns: 1fr; max-width: 900px;">
+            <div class="about-content" style="grid-template-columns: 1fr;">
                 <div class="about-text">
                     <span class="section-subtitle">OUR STORY</span>
                     <h2 class="section-title">Pride in Every Line and Joint</h2>
@@ -60,6 +60,17 @@
                         <p style="font-style: italic; font-size: 1.15rem; line-height: 1.8; color: #334155; margin-bottom: 0;">
                             "I started Delight Construction out of my love for the industry. After working in and around construction most of my life, I decided to start my own company incorporating the things I liked about what I'd seen, and changing the things that I didn't. I believe what really sets us apart as builders is the drive to do better. Our community is important to us, as is our commitment to building."
                         </p>
+                    </div>
+                </div>
+
+                <div class="founder-highlight">
+                    <div class="founder-highlight__image">
+                        <img src="images/delight-construction-team-member-portrait-1.avif" alt="Delight Construction Founder" loading="lazy">
+                    </div>
+                    <div class="founder-highlight__content">
+                        <span class="section-subtitle">FOUNDER</span>
+                        <h3 class="section-title" style="font-size:1.8rem; margin-bottom:1rem;">Delight Construction Founder</h3>
+                        <p>The founder of Delight Construction brings a hands-on, owner-operated approach to every project. From early planning through the final walkthrough, that means direct communication, active oversight, and a strong commitment to craftsmanship on site.</p>
                     </div>
                 </div>
 
@@ -172,7 +183,7 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "HomeAndConstructionBusiness",
+          "@type": ["LocalBusiness", "Contractor"],
           "@id": "https://delight-construction.com/#business",
           "name": "Delight Construction",
           "url": "https://delight-construction.com/",
@@ -194,14 +205,32 @@
             { "@type": "Place", "name": "Seeley Lake, MT" },
             { "@type": "Place", "name": "Western Montana" }
           ],
-          "priceRange": "$$$"
+          "priceRange": "$$$",
+          "parentOrganization": { "@id": "https://delight-construction.com/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://delight-construction.com/#organization",
+          "name": "Delight Construction",
+          "url": "https://delight-construction.com/",
+          "telephone": "+1-406-317-3855",
+          "email": "delightconstruction7@gmail.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://delight-construction.com/images/DelightLogo.png"
+          },
+          "areaServed": [
+            { "@type": "Place", "name": "Missoula, MT" },
+            { "@type": "Place", "name": "Seeley Lake, MT" },
+            { "@type": "Place", "name": "Western Montana" }
+          ]
         },
         {
           "@type": "WebSite",
           "@id": "https://delight-construction.com/#website",
           "url": "https://delight-construction.com/",
           "name": "Delight Construction",
-          "publisher": { "@id": "https://delight-construction.com/#business" },
+          "publisher": { "@id": "https://delight-construction.com/#organization" },
           "inLanguage": "en-US"
         },
         {

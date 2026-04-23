@@ -14,7 +14,7 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "HomeAndConstructionBusiness",
+          "@type": ["LocalBusiness", "Contractor"],
           "@id": "https://delight-construction.com/#business",
           "name": "Delight Construction",
           "url": "https://delight-construction.com/",
@@ -36,14 +36,32 @@
             { "@type": "Place", "name": "Seeley Lake, MT" },
             { "@type": "Place", "name": "Western Montana" }
           ],
-          "priceRange": "$$$"
+          "priceRange": "$$$",
+          "parentOrganization": { "@id": "https://delight-construction.com/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://delight-construction.com/#organization",
+          "name": "Delight Construction",
+          "url": "https://delight-construction.com/",
+          "telephone": "+1-406-317-3855",
+          "email": "delightconstruction7@gmail.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://delight-construction.com/images/DelightLogo.png"
+          },
+          "areaServed": [
+            { "@type": "Place", "name": "Missoula, MT" },
+            { "@type": "Place", "name": "Seeley Lake, MT" },
+            { "@type": "Place", "name": "Western Montana" }
+          ]
         },
         {
           "@type": "WebSite",
           "@id": "https://delight-construction.com/#website",
           "url": "https://delight-construction.com/",
           "name": "Delight Construction",
-          "publisher": { "@id": "https://delight-construction.com/#business" },
+          "publisher": { "@id": "https://delight-construction.com/#organization" },
           "inLanguage": "en-US"
         },
         {

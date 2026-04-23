@@ -14,7 +14,7 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "HomeAndConstructionBusiness",
+          "@type": ["LocalBusiness", "Contractor"],
           "@id": "https://delight-construction.com/#business",
           "name": "Delight Construction",
           "url": "https://delight-construction.com/",
@@ -39,14 +39,32 @@
             { "@type": "Place", "name": "Clinton, MT" },
             { "@type": "Place", "name": "Seeley Lake, MT" }
           ],
-          "priceRange": "$$$"
+          "priceRange": "$$$",
+          "parentOrganization": { "@id": "https://delight-construction.com/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://delight-construction.com/#organization",
+          "name": "Delight Construction",
+          "url": "https://delight-construction.com/",
+          "telephone": "+1-406-317-3855",
+          "email": "delightconstruction7@gmail.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://delight-construction.com/images/DelightLogo.png"
+          },
+          "areaServed": [
+            { "@type": "Place", "name": "Missoula, MT" },
+            { "@type": "Place", "name": "Seeley Lake, MT" },
+            { "@type": "Place", "name": "Western Montana" }
+          ]
         },
         {
           "@type": "WebSite",
           "@id": "https://delight-construction.com/#website",
           "url": "https://delight-construction.com/",
           "name": "Delight Construction",
-          "publisher": { "@id": "https://delight-construction.com/#business" },
+          "publisher": { "@id": "https://delight-construction.com/#organization" },
           "inLanguage": "en-US"
         },
         {
@@ -96,36 +114,6 @@
           ],
           "url": "https://delight-construction.com/pole-buildings-missoula.html",
           "description": "Post-frame pole buildings for Missoula-area properties: shops, barns, garages, and storage buildings built for Western Montana weather."
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://delight-construction.com/pole-buildings-missoula.html#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What can you build as a pole building?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Common pole buildings in the Missoula area include shop buildings, detached garages, barns, hay and equipment storage, and RV covers. We can also add lean-tos, interior partitions, and insulation packages depending on use."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do pole buildings work well in Missoula winters?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes — when they’re engineered and built for snow, wind, drainage, and freeze-thaw. We focus on proper site prep, structural details, and durable exterior finishes for Western Montana conditions."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you help with permitting in Missoula County?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We can help you plan around site constraints and coordinate the details needed for permitting so the project moves forward with fewer surprises."
-              }
-            }
-          ]
         }
       ]
     }
